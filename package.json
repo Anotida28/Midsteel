@@ -1,0 +1,10 @@
+{
+  "name": "midsteel-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static marketing website for Midsteel",
+  "scripts": {
+    "preview": "node scripts/preview-server.js 4173",
+    "preview:default": "node scripts/preview-server.js"
+  }
+}

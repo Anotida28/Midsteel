@@ -10,14 +10,19 @@ if (yearTarget) {
 }
 
 if (menuToggle && siteNav) {
+  const setMenuState = (isOpen) => {
+    menuToggle.setAttribute("aria-expanded", String(isOpen));
+    menuToggle.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation");
+  };
+
   const closeMenu = () => {
     document.body.classList.remove("nav-open");
-    menuToggle.setAttribute("aria-expanded", "false");
+    setMenuState(false);
   };
 
   menuToggle.addEventListener("click", () => {
     const isOpen = document.body.classList.toggle("nav-open");
-    menuToggle.setAttribute("aria-expanded", String(isOpen));
+    setMenuState(isOpen);
   });
 
   siteNav.querySelectorAll("a").forEach((link) => {
@@ -50,6 +55,8 @@ if (menuToggle && siteNav) {
       closeMenu();
     }
   });
+
+  setMenuState(document.body.classList.contains("nav-open"));
 }
 
 if ("IntersectionObserver" in window) {

@@ -3,7 +3,8 @@ const fs = require("fs");
 const path = require("path");
 
 const root = process.cwd();
-const port = Number(process.argv[2] || 4173);
+const port = Number(process.env.PORT || process.argv[2] || 4173);
+const host = process.env.HOST || "0.0.0.0";
 
 const contentTypes = {
   ".css": "text/css; charset=utf-8",
@@ -91,6 +92,6 @@ const server = http.createServer((request, response) => {
   });
 });
 
-server.listen(port, "127.0.0.1", () => {
-  console.log(`Midsteel preview running at http://127.0.0.1:${port}/`);
+server.listen(port, host, () => {
+  console.log(`Midsteel preview running at http://${host}:${port}/`);
 });

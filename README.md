@@ -31,4 +31,6 @@ Static marketing website for Midsteel (ferrous and non-ferrous metal sales).
 ## Notes
 
 - The quote form opens WhatsApp with pre-filled user details.
+- For a Node-based host, use `npm start` and provide `PORT` if your platform assigns one.
+- For a static host, deploy `index.html`, `assets/`, and any other top-level public files directly.
 - Runtime logs are ignored via .gitignore and should not be committed.

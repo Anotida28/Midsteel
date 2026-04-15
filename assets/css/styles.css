@@ -174,7 +174,7 @@ textarea {
   color: #fff;
   background:
     linear-gradient(105deg, rgba(4, 14, 40, 0.82) 0%, rgba(7, 23, 63, 0.68) 42%, rgba(10, 30, 76, 0.5) 100%),
-    url("../images/hero-landscape.png") center center / cover no-repeat;
+    url("../images/hero-landscape.jpg") center center / cover no-repeat;
 }
 
 .hero::before {
@@ -321,7 +321,6 @@ textarea {
   margin-top: 2rem;
 }
 
-.value-card,
 .value-card {
   padding: 1.5rem;
   background: rgba(255, 255, 255, 0.84);

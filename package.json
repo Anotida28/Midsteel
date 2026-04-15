@@ -4,6 +4,7 @@
   "private": true,
   "description": "Static marketing website for Midsteel",
   "scripts": {
+    "start": "node scripts/preview-server.js",
     "preview": "node scripts/preview-server.js 4173",
     "preview:default": "node scripts/preview-server.js"
   }

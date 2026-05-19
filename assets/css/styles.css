@@ -138,6 +138,11 @@ textarea {
   transform: translateY(7px) rotate(45deg);
 }
 
+.menu-toggle[aria-expanded="true"] span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
 .menu-toggle[aria-expanded="true"] span:last-child {
   transform: translateY(-7px) rotate(-45deg);
 }
@@ -707,6 +712,107 @@ textarea {
     align-items: flex-end;
   }
 }
+
+/* ── Hero actions ────────────────────────────────────────── */
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.button-ghost {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.38);
+  color: #fff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+}
+
+.button-ghost:hover {
+  background: rgba(255, 255, 255, 0.22);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.24);
+  transform: translateY(-2px);
+}
+
+/* ── Product card CTA link ───────────────────────────────── */
+
+.product-cta {
+  display: inline-block;
+  margin-top: 0.9rem;
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: var(--accent-strong);
+  transition: color 180ms ease, letter-spacing 180ms ease;
+}
+
+.product-cta:hover {
+  color: var(--accent);
+  letter-spacing: 0.02em;
+}
+
+/* ── In-text link styling for section-heading & form-note ── */
+
+.section-heading p a,
+.form-note a {
+  color: var(--accent-strong);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 180ms ease;
+}
+
+.section-heading p a:hover,
+.form-note a:hover {
+  color: var(--accent);
+}
+
+/* ── Floating WhatsApp button ────────────────────────────── */
+
+.whatsapp-fab {
+  position: fixed;
+  bottom: 1.75rem;
+  right: 1.75rem;
+  z-index: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  background: #25d366;
+  color: #fff;
+  box-shadow: 0 8px 28px rgba(37, 211, 102, 0.48);
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+
+.whatsapp-fab:hover {
+  transform: scale(1.1);
+  box-shadow: 0 14px 38px rgba(37, 211, 102, 0.58);
+}
+
+/* ── Mobile tweaks ───────────────────────────────────────── */
+
+@media (max-width: 560px) {
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-actions .button {
+    text-align: center;
+    justify-content: center;
+  }
+
+  .whatsapp-fab {
+    bottom: 1.25rem;
+    right: 1.25rem;
+    width: 56px;
+    height: 56px;
+  }
+}
+
+/* ── Reduced motion ──────────────────────────────────────── */
 
 @media (prefers-reduced-motion: reduce) {
   html {
